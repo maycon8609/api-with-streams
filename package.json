@@ -1,0 +1,14 @@
+{
+  "name": "fundamentos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "dev:streams": "node --watch streams/fundamentals.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
