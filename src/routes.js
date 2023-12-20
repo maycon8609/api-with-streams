@@ -31,6 +31,18 @@ export const routes = [
     }
   },
   {
+    method: "PUT",
+    path: buildRoutePath("/users/:id"),
+    handle: (request, response) => {
+      const { id } = request.params
+      const { name, email } = request.body
+
+      database.update("users", id, { name, email })
+
+      return response.writeHead(204).end()
+    }
+  },
+  {
     method: "DELETE",
     path: buildRoutePath("/users/:id"),
     handle: (request, response) => {
@@ -40,5 +52,5 @@ export const routes = [
 
       return response.writeHead(204).end()
     }
-  },
+  }
 ]
